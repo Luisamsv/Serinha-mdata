@@ -1,7 +1,7 @@
 # Serinhaem monthly-discharge reproducibility package
 
 This repository package contains the public monthly data and the complete R
-workflow used for the revised manuscript.
+workflow used for the manuscript.
 
 ## Files
 
