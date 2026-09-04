@@ -1,0 +1,52 @@
+Serinhaem River monthly data — data dictionary
+
+Files
+-----
+T1_monthly_data.txt
+  Temporal configuration T1.
+  Calibration: 1966-01 through 2005-12.
+  Validation: 2006-01 through 2019-04.
+
+T2_monthly_data.txt
+  Temporal configuration T2.
+  Calibration: 1966-01 through 2011-12.
+  Validation: 2012-01 through 2019-04.
+
+Columns
+-------
+date
+  Monthly observation date, represented by the first day of the month.
+  Format: YYYY-MM-DD.
+
+freshwater_discharge_m3_s
+  Observed monthly river discharge at the Itubera gauging station.
+  Unit: m^3 s^-1.
+
+precipitation_mm_month
+  Observed monthly precipitation at the Camamu rain gauge.
+  Unit: mm month^-1.
+
+data_role
+  Role of the monthly observation in the corresponding temporal configuration.
+  Allowed values: calibration, validation.
+
+Missing values
+--------------
+NA denotes an unavailable original observation. Missing discharge and
+precipitation values are retained at their original monthly positions and are
+not imputed. Lagged predictors associated with an unavailable observation also
+remain unavailable.
+
+Internal model notation
+-----------------------
+Qk denotes freshwater discharge lagged by k months.
+Pk denotes precipitation lagged by k months.
+These are model-predictor labels generated within the analysis script and are
+not raw-data column names.
+
+Record audit used in the revised analysis
+-----------------------------------------
+Calendar months: 640 (1966-01 through 2019-04)
+Observed freshwater discharge values: 634
+Observed precipitation values: 631
+Months with both variables observed: 628
